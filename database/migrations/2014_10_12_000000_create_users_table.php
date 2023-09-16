@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('alamat_user');
+            $table->string('no_HP');
+            $table->boolean('JK_user');
         });
     }
 
