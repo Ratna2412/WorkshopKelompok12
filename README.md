@@ -1,3 +1,11 @@
+# Workshop Pemrograman Perangkat Lunak Web (Framework) - Kelompok 12
+Sistem Informasi Marketplace Layanan Jasa Service dan Instalasi Alat Elektronik
+<p>
+  Nama Kelompok : <br> 
+  1. Salma Aida Yasmi     (434221037) <br>
+  2. Ratna Firdaus        (434221047)
+</p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
