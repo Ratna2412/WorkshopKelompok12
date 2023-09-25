@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->float('harga_layanan');
+            $table->unsignedBigInteger('id_jenis_layanan');
+
+            $table->foreign('id_jenis_layanan')->references('id')->on('jenis_layanan');
         });
     }
     

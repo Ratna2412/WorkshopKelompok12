@@ -20,8 +20,9 @@ return new class extends Migration
             //users, vendor, pemesanan
             $table->unsignedBigInteger('id_users');
             $table->unsignedBigInteger('id_vendor');
-            $table->unsignedBigInteger('id_pemesanan');
+            $table->unsignedBigInteger('id_jenis_bayar');
             //fk
+            $table->foreign('id_jenis_bayar')->references('id')->on('jenis_bayar');
             $table->foreign('id_users')->references('id')->on('users');
             $table->foreign('id_vendor')->references('id')->on('vendor');
             

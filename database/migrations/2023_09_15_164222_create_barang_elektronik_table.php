@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('merk_barang');
             $table->string('series_barang');
             $table->integer('jumlah_barang');
+            //jenis barang
+            $table->unsignedBigInteger('id_jenis_barang');
+            //fk
+            $table->foreign('id_jenis_barang')->references('id')->on('jenis_barang');
         });
     }
 

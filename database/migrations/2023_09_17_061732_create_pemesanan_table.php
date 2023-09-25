@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('status_pemesanan');
             $table->text('ulasan')->nullable();
             
-            // Foreign keys
+            //users, vendor, bayar, barang
             $table->unsignedBigInteger('id_users');
             $table->unsignedBigInteger('id_vendor')->nullable();
             $table->unsignedBigInteger('id_bayar')->nullable();
             $table->unsignedBigInteger('id_barang')->nullable();
             
-            // Define foreign key constraints
+            //fk
             $table->foreign('id_users')->references('id')->on('users');
             $table->foreign('id_vendor')->references('id')->on('vendor');
             $table->foreign('id_bayar')->references('id')->on('pembayaran');
