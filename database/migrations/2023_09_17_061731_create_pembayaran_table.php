@@ -14,17 +14,19 @@ return new class extends Migration
         Schema::create('pembayaran', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('metode_bayar');
             $table->dateTime('tgl_bayar');
             $table->float('total_bayar');
             $table->boolean('status_bayar');
+            //users, vendor, pemesanan
+            $table->unsignedBigInteger('id_users');
+            $table->unsignedBigInteger('id_vendor');
+            $table->unsignedBigInteger('id_pemesanan');
+            //fk
+            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('id_vendor')->references('id')->on('vendor');
+            
         });
-
-        Schema::table('pembayaran', function($table) {
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_vendor')->references('id')->on('vendor')->onDelete('set null');
-            $table->foreign('id_pemesanan')->references('id')->on('pemesanan')->onDelete('set null');
-        });   
+ 
     }
 
     /**

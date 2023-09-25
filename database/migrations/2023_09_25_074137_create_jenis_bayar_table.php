@@ -11,19 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('layanan', function (Blueprint $table) {
+        Schema::create('jenis_bayar', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->boolean('jenis_layanan');
-            $table->float('harga_layanan');
+            $table->string('metode_bayar');
+            $table->unsignedBigInteger('id_bayar');
+
+            $table->foreign('id_bayar')->references('id')->on('pembayaran');
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('layanan');
+        Schema::dropIfExists('jenis_bayar');
     }
 };

@@ -18,14 +18,19 @@ return new class extends Migration
             $table->string('keluhan');
             $table->string('status_pemesanan');
             $table->text('ulasan')->nullable();
-        });
-
-        Schema::table('pemesanan', function($table) {
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_vendor')->references('id')->on('vendor')->onDelete('set null');
-            $table->foreign('id_bayar')->references('id')->on('pembayaran')->onDelete('set null');
-            $table->foreign('id_barang')->references('id')->on('barang_elektronik')->onDelete('set null');
-        });    
+            
+            // Foreign keys
+            $table->unsignedBigInteger('id_users');
+            $table->unsignedBigInteger('id_vendor')->nullable();
+            $table->unsignedBigInteger('id_bayar')->nullable();
+            $table->unsignedBigInteger('id_barang')->nullable();
+            
+            // Define foreign key constraints
+            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('id_vendor')->references('id')->on('vendor');
+            $table->foreign('id_bayar')->references('id')->on('pembayaran');
+            $table->foreign('id_barang')->references('id')->on('barang_elektronik');
+        });   
     }
 
 
