@@ -22,6 +22,10 @@ return new class extends Migration
             $table->boolean('jk_user');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->unsignedBigInteger('id_role');
+
+            $table->foreign('id_role')->references('id')->on('role');
         });
     }
 
