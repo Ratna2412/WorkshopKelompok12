@@ -1,5 +1,6 @@
 # Workshop Pemrograman Perangkat Lunak Web (Framework) - Kelompok 12
-Sistem Informasi Marketplace Layanan Jasa Service dan Instalasi Alat Elektronik
+# Volta
+Sistem Informasi Marketplace Layanan Jasa Service dan Instalasi Barang Elektronik
 <p>
   Nama Kelompok : <br> 
   1. Salma Aida Yasmi     (434221037) <br>
