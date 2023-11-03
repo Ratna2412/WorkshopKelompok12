@@ -21,10 +21,17 @@ return new class extends Migration
             $table->string('no_telp', 13);
             $table->rememberToken();
             $table->timestamps();
+<<<<<<< HEAD
             $table->unsignedBigInteger('id_role');
 
             $table->foreign('id_role')->references('id')->on('role');
 
+=======
+
+            $table->unsignedBigInteger('id_role');
+
+            $table->foreign('id_role')->references('id')->on('role');
+>>>>>>> 5a9e08e43ceea365814c4b615142fbd9e8fa25fa
         });
     }
 
