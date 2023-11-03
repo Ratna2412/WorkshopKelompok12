@@ -16,18 +16,16 @@ return new class extends Migration
             $table->timestamps();
             $table->dateTime('tgl_bayar');
             $table->float('total_bayar');
-            $table->boolean('status_bayar');
-            //users, vendor, pemesanan
+            $table->char('status');
+
             $table->unsignedBigInteger('id_users');
-            $table->unsignedBigInteger('id_vendor');
-            $table->unsignedBigInteger('id_jenis_bayar');
-            //fk
-            $table->foreign('id_jenis_bayar')->references('id')->on('jenis_bayar');
+            $table->unsignedBigInteger('id_barang');
+            $table->unsignedBigInteger('id_pemesanan');
+
             $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_vendor')->references('id')->on('vendor');
-            
+            $table->foreign('id_barang')->references('id')->on('barang');
+            $table->foreign('id_pemesanan')->references('id')->on('pemesanan');
         });
- 
     }
 
     /**

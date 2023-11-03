@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Volta - Layanan Jasa Servis Barang Elektronik'),
 
     /*
     |--------------------------------------------------------------------------

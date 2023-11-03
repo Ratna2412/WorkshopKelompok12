@@ -16,23 +16,14 @@ return new class extends Migration
             $table->timestamps();
             $table->dateTime('tgl_pemesanan');
             $table->string('keluhan');
-            $table->string('status_pemesanan');
             $table->text('ulasan')->nullable();
-            
-            //users, vendor, bayar, barang
             $table->unsignedBigInteger('id_users');
-            $table->unsignedBigInteger('id_vendor')->nullable();
-            $table->unsignedBigInteger('id_bayar')->nullable();
-            $table->unsignedBigInteger('id_barang')->nullable();
-            
-            //fk
-            $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_vendor')->references('id')->on('vendor');
-            $table->foreign('id_bayar')->references('id')->on('pembayaran');
-            $table->foreign('id_barang')->references('id')->on('barang_elektronik');
-        });   
-    }
+            $table->unsignedBigInteger('id_barang');
 
+            $table->foreign('id_users')->references('id')->on('users');
+            $table->foreign('id_barang')->references('id')->on('barang');
+        });
+    }
 
     /**
      * Reverse the migrations.
