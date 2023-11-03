@@ -20,7 +20,7 @@
                 "reference": "0ad82ce168c82ba30d1c01ec86116ab52f589478",
                 "shasum": ""
             },
-            "require": { 363D-F16A
+            "require": { 
                 "php": "^8.0"
             },
             "require-dev": {
